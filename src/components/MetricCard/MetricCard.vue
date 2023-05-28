@@ -78,7 +78,7 @@ const deltaPercentageLabel = computed(() => {
       <div
         class="flex flex-col h-full w-full flex-1 justify-center items-center gap-3"
       >
-        <p class="font-bold text-4xl text-center">
+        <p class="font-bold text-3xl text-center">
           {{ formatMetric(currentValue) }}
         </p>
         <p
@@ -123,7 +123,7 @@ const deltaPercentageLabel = computed(() => {
                 ></path>
               </svg>
               <p
-                class="text-lg"
+                class="text-md"
                 :class="`${delta < 0 ? 'text-red-500' : 'text-green-500'}`"
               >
                 {{ deltaTotalLabel }}
@@ -164,7 +164,7 @@ const deltaPercentageLabel = computed(() => {
                 ></path>
               </svg>
               <p
-                class="text-lg"
+                class="text-md"
                 :class="`${delta < 0 ? 'text-red-500' : 'text-green-500'}`"
               >
                 {{ deltaPercentageLabel }}
