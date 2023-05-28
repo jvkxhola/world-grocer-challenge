@@ -81,6 +81,12 @@ const deltaPercentageLabel = computed(() => {
         <p class="font-bold text-4xl text-center">
           {{ formatMetric(currentValue) }}
         </p>
+        <p
+          v-if="previousValue !== null"
+          class="text-gray-500 text-sm text-center"
+        >
+          previous: {{ formatMetric(previousValue) }}
+        </p>
         <div v-if="previousValue !== null">
           <div class="flex justify-center items-center gap-4">
             <span class="flex items-center">
