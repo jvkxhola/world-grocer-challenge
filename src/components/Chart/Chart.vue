@@ -49,7 +49,7 @@ ChartJS.register(
       :data="{ labels, datasets }"
       :options="{
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
       }"
     />
   </div>

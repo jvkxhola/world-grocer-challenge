@@ -53,9 +53,9 @@ export const useAggregatedData = () => {
     }
   });
 
-  const onUpdateStartDate = (startDate: Date) => (dateRange.start = startDate);
-
-  const onUpdateEndDate = (endDate: Date) => (dateRange.end = endDate);
+  const onUpdateDates = (start: Date, end: Date) => {
+    Object.assign(dateRange, { start, end });
+  };
 
   const chartData = computed(() => {
     return aggregatedData.value.reduce<{
@@ -86,7 +86,6 @@ export const useAggregatedData = () => {
     isLoading,
     dateRange,
     dateRangeLimits,
-    onUpdateEndDate,
-    onUpdateStartDate,
+    onUpdateDates,
   };
 };

@@ -13,7 +13,7 @@ defineProps({
 
 <template>
   <div
-    class="flex justify-center items-center p-6 rounded-md shadow-lg"
+    class="flex justify-center items-center p-6 rounded-md shadow-lg bg-white"
     :class="`${isLoading && 'bg-gray-200 animate-pulse'} ${classNames}`"
   >
     <slot v-if="!isLoading"></slot>

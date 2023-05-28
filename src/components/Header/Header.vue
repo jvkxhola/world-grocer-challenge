@@ -9,7 +9,7 @@ const handleToggleMenu = () => {
 </script>
 
 <template>
-  <nav class="bg-gray-800">
+  <nav class="bg-white">
     <div class="mx-auto px-2 sm:px-4 lg:px-6">
       <div class="relative flex h-14 items-center">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -62,7 +62,7 @@ const handleToggleMenu = () => {
             <div class="flex space-x-4">
               <a
                 href="#"
-                class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                class="bg-[#450e72] text-white rounded-md px-3 py-2 text-sm font-medium"
                 aria-current="page"
                 >Dashboard</a
               >
