@@ -7,6 +7,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  subtitle: {
+    type: String,
+    default: "",
+  },
   currentValue: {
     type: Number,
     required: true,
@@ -24,7 +28,7 @@ const props = defineProps({
   },
   deltaType: {
     type: String,
-    required: true,
+    default: "total",
     validator: (value: string) => {
       return ["total", "percentage"].includes(value);
     },
@@ -46,6 +50,10 @@ const formatMetric = (value: number) => {
 };
 
 const deltaLabel = computed(() => {
+  if (!props.previousValue) {
+    return "";
+  }
+
   if (props.deltaType === "total") {
     return formatMetric(delta.value);
   }
@@ -58,17 +66,22 @@ const deltaLabel = computed(() => {
 </script>
 
 <template>
-  <Card :is-loading="isLoading" :classNames="'w-80 h-64'">
+  <Card :is-loading="isLoading" :classNames="'w-60 h-40'">
     <div
       class="w-full h-full flex flex-col justify-center items-center gap-4 text-center"
     >
-      <p class="self-start text-lg">
-        {{ title }}
-      </p>
+      <div class="self-start text-left">
+        <p class="text-md">
+          {{ title }}
+        </p>
+        <p class="text-sm text-gray-500">
+          {{ subtitle }}
+        </p>
+      </div>
       <div
         class="flex flex-col h-full w-full flex-1 justify-center items-center gap-3"
       >
-        <p class="font-bold text-5xl text-center">
+        <p class="font-bold text-4xl text-center">
           {{ formatMetric(currentValue) }}
         </p>
         <div v-if="previousValue !== null">
@@ -106,7 +119,7 @@ const deltaLabel = computed(() => {
               ></path>
             </svg>
             <p
-              class="text-xl"
+              class="text-lg"
               :class="`${delta < 0 ? 'text-red-500' : 'text-green-500'}`"
             >
               {{ deltaLabel }}
