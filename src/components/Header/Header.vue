@@ -16,7 +16,7 @@ const handleToggleMenu = () => {
           <!-- Mobile menu button-->
           <button
             type="button"
-            class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            class="inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             aria-controls="mobile-menu"
             aria-expanded="false"
             @click="handleToggleMenu"
@@ -56,7 +56,7 @@ const handleToggleMenu = () => {
         </div>
 
         <div
-          class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start"
+          class="flex flex-1 items-center justify-center sm:justify-between sm:items-baseline"
         >
           <div class="hidden sm:block">
             <div class="flex space-x-4">
@@ -68,6 +68,7 @@ const handleToggleMenu = () => {
               >
             </div>
           </div>
+          <p>World Grocer</p>
         </div>
       </div>
     </div>
@@ -81,7 +82,7 @@ const handleToggleMenu = () => {
       <div class="space-y-1 px-2 pb-3 pt-2">
         <a
           href="#"
-          class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+          class="bg-white text-black block rounded-md px-3 py-2 text-base font-medium"
           aria-current="page"
           >Dashboard</a
         >

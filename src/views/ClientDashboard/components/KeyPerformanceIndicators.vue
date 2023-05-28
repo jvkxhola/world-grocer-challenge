@@ -6,7 +6,8 @@ const { kpis, isLoading } = useKeyPerformanceIndicators();
 </script>
 
 <template>
-  <div class="flex justify-center sm:gap-4 md:gap-6 lg:gap-8 flex-wrap">
+  <p class="text-center text-lg font-bold">KPIs</p>
+  <div class="flex justify-center gap-4 md:gap-6 lg:gap-8 flex-wrap">
     <MetricCard
       title="Total Offers"
       :current-value="kpis.totalOffers"

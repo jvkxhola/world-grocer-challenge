@@ -25,25 +25,24 @@ const emit = defineEmits<{
 }>();
 
 watch(dateRange, (dateRange: Array<Date>) => {
-  console.log({ dateRange });
   emit("update-model-value", dateRange);
 });
 
 watch(
   () => props.dates,
   (dates: Array<Date>) => {
-    console.log({ dates });
     dateRange.value = dates;
   }
 );
 </script>
 
 <template>
-  <div class="w-[22rem]">
+  <div class="w-fit">
     <VueDatePicker
       v-model="dateRange"
       :min-date="minDate"
       :max-date="maxDate"
+      :enable-time-picker="false"
       range
     ></VueDatePicker>
   </div>
