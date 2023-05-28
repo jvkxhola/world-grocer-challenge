@@ -26,6 +26,10 @@ defineProps({
     type: Array<DataSet>,
     default: [],
   },
+  classNames: {
+    type: String,
+    default: "",
+  },
 });
 
 ChartJS.register(
@@ -40,11 +44,13 @@ ChartJS.register(
 </script>
 
 <template>
-  <Line
-    :data="{ labels, datasets }"
-    :options="{
-      responsive: true,
-      maintainAspectRatio: false,
-    }"
-  />
+  <div :class="`${classNames}`">
+    <Line
+      :data="{ labels, datasets }"
+      :options="{
+        responsive: true,
+        maintainAspectRatio: true,
+      }"
+    />
+  </div>
 </template>

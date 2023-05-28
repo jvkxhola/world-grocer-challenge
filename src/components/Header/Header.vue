@@ -11,7 +11,7 @@ const handleToggleMenu = () => {
 <template>
   <nav class="bg-gray-800">
     <div class="mx-auto px-2 sm:px-4 lg:px-6">
-      <div class="relative flex h-16 items-center">
+      <div class="relative flex h-14 items-center">
         <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
           <!-- Mobile menu button-->
           <button
