@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MetricCard from "./MetricCard.vue";
+import MetricCard from "../../../components/MetricCard";
 import useKeyPerformanceIndicators from "../../../hooks/useKeyPerformanceIndicators";
 
 const { kpis, isLoading } = useKeyPerformanceIndicators();

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Card from "../../../components/Card/index.js";
+import Card from "../Card";
 import { computed } from "vue";
 
 const props = defineProps({
