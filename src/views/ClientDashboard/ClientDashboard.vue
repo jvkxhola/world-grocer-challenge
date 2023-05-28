@@ -4,7 +4,7 @@ import KeyPerformanceIndicators from "./components/KeyPerformanceIndicators.vue"
 </script>
 
 <template>
-  <div class="h-full flex flex-col gap-4 md:gap-6 lg:gap-8 p-2">
+  <div class="h-full flex flex-col gap-4 p-2">
     <KeyPerformanceIndicators /><DailyTrending />
   </div>
 </template>
